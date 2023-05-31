@@ -138,7 +138,11 @@ Puppet::Type.type(:rh_subscription).provide(:redhat) do
   end
 
   def create
-    rhsm('attach', "--pool=#{@resource[:name]}")
+    if @resource.value(:pool)
+      rhsm('attach', "--pool=#{@resource[:pool]}")
+    else
+      rhsm('attach')
+    end
   end
 
   def destroy

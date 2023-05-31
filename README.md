@@ -57,7 +57,8 @@ rh_repo { 'rhel-7-server-extras-rpms':
 Use `rh_subscription` type to add or remove a subscription based on its pool ID:
 
 ```puppet
-rh_subscription { '8e8e7f7a77554a776277ac6dca654':
+rh_subscription { 'subs1':
+  pool   => '8e8e7f7a77554a776277ac6dca654',
   ensure => present,
 }
 ```

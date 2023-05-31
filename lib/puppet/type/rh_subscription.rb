@@ -11,4 +11,7 @@ Puppet::Type.newtype(:rh_subscription) do
 
   newparam(:serial) do # rubocop:disable Lint/EmptyBlock
   end
+
+  newparam(:pool) do # rubocop:disable Lint/EmptyBlock
+  end
 end
